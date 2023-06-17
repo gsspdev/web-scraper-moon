@@ -13,12 +13,13 @@ def is_alpha(c):
     return (97 <= ord(c) and ord(c) <= 122) or (65 <= ord(c) and ord(c) <= 90)
 
 # open file
-args = 'path_to_your_file.csv'
+args = 'companies.csv'
 try:
     data = pd.read_csv(args)
 except Exception as e:
     check(e)
 
+print(data)
 # create spreadsheet
 wb = Workbook()
 ws = wb.active
